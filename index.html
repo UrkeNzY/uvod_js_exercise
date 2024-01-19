@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Prijava ispita</title>
+</head>
+<body>
+    <header>
+      <div id="header-container">
+        <img id="header-logo" src="/Ja1/images/paper-and-pen-svgrepo-com.svg"/>
+        <h1>E-prijava</h1>
+      </div>
+    </header>
+    <main>
+        <h1 id="form-title">Prijava ispita</h1>
+
+        <form>
+            <div class="form-input">
+                <label class="block-label" for="input-ime-prezime">Ime i prezime</label>
+                <input class="form-text" id="input-ime-prezime" type="text" placeholder="Marko Markovic">
+            </div>
+
+            <div class="form-input">
+                <label class="block-label" for="input-index">Broj Indeksa</label>
+                <input class="form-text" id="input-index" type="text" placeholder="1/23">
+            </div>
+
+            <div class="form-input">
+            <label class="block-label">Smjer: </label>
+            
+            <input id="input-smjer-a" type="radio" name="smejr" value="A"> 
+            <label for="input-smjer-a">A</label>
+
+            <input id="input-smjer-b" type="radio" name="smejr" value="B"> 
+            <label for="input-smjer-b">B</label>
+
+            <input id="input-smjer-c" type="radio" name="smejr" value="C"> 
+            <label for="input-smjer-c">C</label>
+
+            <input id="input-smjer-d" type="radio" name="smejr" value="D"> 
+            <label for="input-smjer-d">D</label>
+            </div>
+
+            <div class="form-input">
+                <label class="block-label" for="budzet">Budzet</label>
+                <input id="budzet" type="checkbox">
+            </div>
+
+            <div class="form-input">
+            <label class="block-label" for="select-predmet">Predmet</label>
+            <select name="" id="select-predmet">
+                <option value="Uvod u kompjuterske nauke" disabled>Uvod u kompjuterske nauke</option>
+                <option value="Racunari i programiranje">Racunari i programiranje</option>
+                <option value="Analiza 1">Analiza 1</option>
+                <option value="Engleski 1">Engleski 1</option>
+                <option value="Uvod u matematicUvod u matematicku logikuku logiku">Uvod u matematicku logiku</option>
+            </select>
+            </div>
+
+            <div id="form-actions">
+                <button id="button-submit">Prijavi</button>
+                <button id="button-cancel" type="button">Odustani</button>
+            </div>
+
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>
+                        Smjer 
+                        <button onclick="(() => {
+                            clearTable();
+                            sortirajPrijave('smjer');
+                            fillTable(prijave);
+                        })()">Sort</button>
+                    </th>
+                    <th>Broj Indeksa</th>
+                    <th>Finansiranje</th>
+                    <th>
+                        Predmet 
+                        <button onclick="(() => {
+                            clearTable();
+                            sortirajPrijave('predmet');
+                            fillTable(prijave);
+                        })">Sort</button>
+                    </th>
+                    <th>Ukloni</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+
+            <tfoot><tr><td>Ukupno:</td><td id="prijave-brojac" colspan="5">0</td></tr></tfoot>
+        </table>
+
+        
+
+        <script src="main.js"></script>
+    </main>
+</body>
+</html>

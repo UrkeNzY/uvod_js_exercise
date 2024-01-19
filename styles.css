@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: rgb(43, 40, 40);
+    font-size: 17px;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(9,55,92);
+    color: #ffffff;
+    padding: 18px 25px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0 0 0 12px;
+    font-weight: light;
+}
+
+#header-container {
+    display: flex;
+    align-items: center;
+}
+
+#header-logo {
+    height: 40px;
+    color: #ffffff;
+}
+
+#form-title {
+    text-align: center;
+    margin-top: 75px;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #555555;
+}
+
+form {
+    background-color: rgb(247, 247, 247);
+    margin: auto;
+    width: 25%;
+    min-width: 450px;
+    box-shadow: 3px 5px 10px rgb(165, 164, 164);
+    padding: 40px 0px;
+}
+
+.block-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-input {
+   margin: auto;
+   width: 70%;
+   margin-bottom: 20px;
+}
+
+.form-text {
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 6px;
+    border-color: transparent;
+    border: 1px solid lightgray;
+}
+
+#form-actions {
+    width: 40%;
+    min-width: 230px;
+    margin: auto;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#form-actions button {
+    background-color: rgb(9,55,92);
+    color: #ffffff;
+    padding: 7px 27px;
+    border-color: transparent;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+#form-actions button:hover {
+    cursor: pointer;
+    background-color: rgb(30, 76, 116);
+}
+
+table {
+    width: 55%;
+    margin: 50px auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
